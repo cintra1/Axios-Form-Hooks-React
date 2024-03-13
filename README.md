@@ -1,6 +1,6 @@
 # Clone do Website da DIO - React JS
 
-Crie uma réplica do sistema de login da DIO usando React CLI, Axios para as requisições, Hooks para o gerenciamento de estado, styled-components para estilização e json-server para simular uma API.
+O projeto é uma réplica do sistema de login da DIO usando React CLI, Axios para as requisições, Hooks para o gerenciamento de estado, styled-components para estilização e json-server para simular uma API.
 
 ![Home](https://github.com/cintra1/Axios-Form-Hooks-React/assets/101955322/92887411-bab3-4336-a787-028b8700c70f)
 
