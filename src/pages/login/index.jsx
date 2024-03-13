@@ -32,7 +32,7 @@ const Login = () => {
     
     const onSubmit = async formData => {
         try {
-            const { data } = await api.get(`users?email=${formData.email}&senha=${formData.password}`);
+            const { data } = await api.get(`users?email=${formData.email}&password=${formData.password}`);
             
             if (data.length === 1) {
                 navigate('/feed')
@@ -47,9 +47,10 @@ const Login = () => {
     
     const navigate = useNavigate();
 
-    const handleClickSignIn = () => {
-        navigate('/feed')
+    const handleClickSignUp = () => {
+        navigate('/cadastro')
     }
+
   return (
     <>
      <Header />
@@ -62,7 +63,7 @@ const Login = () => {
             </Column>
             <Column>
                 <Wrapper>
-                    <TitleLogin>Faça seu cadastro</TitleLogin>
+                    <TitleLogin>Faça login</TitleLogin>
                     <SubtitleLogin>Faça seu login e make the change._</SubtitleLogin>
                     <form onSubmit={handleSubmit(onSubmit)}>
                     <Input name="email" errorMessage={errors?.email?.message}  control={control} placeholder="E-mail" />
@@ -71,7 +72,7 @@ const Login = () => {
                     </form>
                     <Row>
                         <EsqueciText>Esqueci minha senha</EsqueciText>
-                        <CriarText>Criar Conta</CriarText>
+                        <CriarText onClick={handleClickSignUp}>Criar Conta</CriarText>
                     </Row>
                 </Wrapper>
             </Column>

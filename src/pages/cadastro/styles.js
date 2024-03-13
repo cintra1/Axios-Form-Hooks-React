@@ -23,7 +23,6 @@ export const Column = styled.div`
 export const Row = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     margin-top: 20px;
 `
@@ -66,7 +65,6 @@ export const EsqueciText = styled.p`
     font-weight: 700;
     font-size: 14px;
     line-height: 19px;
-    cursor: pointer;
 
     color: #E5E044;
 `
@@ -77,7 +75,18 @@ export const CriarText = styled.p`
     font-weight: 700;
     font-size: 14px;
     line-height: 19px;
+    margin-left: 10px;
     cursor: pointer;
 
-    color: #E23DD7;
+    color: #23DD7A;
+`
+
+export const Desc = styled.p`
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 20px;
+
+    color: #fff;
 `
