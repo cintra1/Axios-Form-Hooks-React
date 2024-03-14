@@ -21,6 +21,7 @@ import {
   Wrapper,
   Desc,
 } from "./styles";
+import { IFormData } from "./types";
 
 const schema = yup
   .object({
@@ -36,12 +37,12 @@ const Cadastro = () => {
     handleSubmit,
     watch,
     formState: { errors, isValid },
-  } = useForm({
+  } = useForm<IFormData>({
     resolver: yupResolver(schema),
     mode: "onChange",
   });
 
-  const onSubmit = async (formData) => {
+  const onSubmit = async (formData: IFormData) => {
     try {
         const { data } = await api.post("/users", formData);
         

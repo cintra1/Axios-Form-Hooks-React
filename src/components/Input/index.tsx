@@ -1,9 +1,10 @@
 import React from 'react'
 import { useForm, Controller, SubmitHandler } from "react-hook-form"
 import { IconContainer, InputContainer, InputText, ErrorText} from './styles';
+import { IInput } from './types';
 
 
-const Input = ({leftIcon, name, control,errorMessage, ...rest}) => {
+const Input = ({leftIcon, name, control,errorMessage, ...rest}: IInput) => {
   return (
     <>
     <InputContainer>
